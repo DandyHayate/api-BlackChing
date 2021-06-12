@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['@zeeone','@alpha'];
+var creatorList = ['@dandyhayate','@blackching'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -341,7 +341,7 @@ router.get('/randomquote', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'BlackChing') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/randomquotes`))
         .then(response => response.json())
